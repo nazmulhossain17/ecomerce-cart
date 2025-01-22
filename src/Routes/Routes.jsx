@@ -7,6 +7,7 @@ import Cart from "../Components/Pages/Cart/Cart";
 import Checkout from "../Components/Pages/Checkout/Checkout";
 import ProductDetails from "../Components/Pages/ProductDetails/ProductDetails";
 import Product from "../Components/Pages/Product/Product";
+import Notfoundpage from "../Components/NotFound/NotFound";
 
 
 const router = createBrowserRouter([
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
               },
             {
                 path: "*",
-                element: <h1>404 Not Found</h1>
+                element: <Notfoundpage/>
             }
         ]
     }

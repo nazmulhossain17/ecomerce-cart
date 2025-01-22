@@ -16,7 +16,7 @@ const Login = () => {
     try {
       dispatch(signInStart());
       const res = await fetch(
-        "https://ecomerce-cart-api.vercel.app/api/auth/login",
+        "https://ecomerce-cart-api.vercel.app/api/users/login",
         {
           method: "POST",
           headers: {

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { useSelector } from "react-redux";
 
 
@@ -16,6 +17,10 @@ const Checkout = () => {
   
     // Calculate the total cost
     const total = subtotal + deliveryCost;
+    const handleSubmit = () => {
+        // Assuming form validation is done
+        toast.success('Order placed successfully!');
+      };
     return (
       <div className="flex flex-col items-center gap-5 p-4 sm:flex-row">
         <div className="w-full sm:w-1/2 md:max-w-3xl">
@@ -145,6 +150,7 @@ const Checkout = () => {
               </div>
               <button
                 type="submit"
+                onClick={handleSubmit}
                 className="mt-4 inline-flex w-full items-center justify-center rounded bg-lime-600 py-2.5 px-4 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-lime-500 sm:text-lg"
               >
                 Place Order

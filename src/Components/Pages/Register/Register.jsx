@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
@@ -22,7 +23,7 @@ const Register = () => {
         }
       );
 
-      if (response.data.user) {
+      if (response.data) {
         console.log("Registration successful");
         toast.success("Account created successful");
         setLoading(false);
